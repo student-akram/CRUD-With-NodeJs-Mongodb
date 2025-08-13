@@ -7,7 +7,8 @@ const { MongoClient, ObjectId } = require('mongodb');
 
 // Database configuration
 const dbName = "mydatabase"; // Name of the database
-const url = "mongodb://localhost:27017"; // Local MongoDB URL
+const url = "mongodb+srv://akramshaik2004:Saleem123@my-crud-app-cluster.oljuhdc.mongodb.net/mydatabase?retryWrites=true&w=majority";
+ // Local MongoDB URL
 const client = new MongoClient(url); // MongoDB client instance
 
 // Middleware to parse URL-encoded data from forms
