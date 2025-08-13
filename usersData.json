@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name":" Akram",
+        "age": 21,
+        "email":"akramshaik2004@gmail.com"
+    },
+    {
+        "id":2,
+        "name":"Saleem",
+        "age": 19,
+        "email":"saleemshaiks1432@gmail.com"
+    },
+    {
+        "id":3,
+        "name":"sanjay",
+        "age": 22,
+        "email":"gundaSanjay2003@gmail.com"
+    },
+    {
+        "id":4,
+        "name":"Sohail",
+        "age": 23,
+        "email":"cafemehak2002@gmail.com"
+    }
+]

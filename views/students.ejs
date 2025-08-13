@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+</head>
+
+
+
+<body>
+    <h1>Data will be here</h1>
+    <link rel="stylesheet" href="/style.css">
+     
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        <% students.forEach(student => { %>
+            <tr>
+                <td><%= student.name %></td>
+                <td><%= student.age %></td>
+                <td><%= student.email %></td>
+                <td>
+                    <a href="/delete/<%= student._id %>">Delete</a>
+                </td>
+                <td>
+                    <a href="/student/<%=student._id %>">Update</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+    <br /><br />
+    
+    
+    <div class="add-student-link">
+  <a href="/add">Add Student</a>
+</div>
+
+
+</body>
+
+</html>

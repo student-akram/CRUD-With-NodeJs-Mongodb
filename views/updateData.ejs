@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Centering the form container */
+        .update-form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f7fc;
+        }
+
+        /* Form box styling */
+        .update-form {
+            background: white;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .update-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        /* Input styling */
+        .update-form input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        .update-form input:focus {
+            border-color: #4CAF50;
+        }
+
+        /* Submit button */
+        .update-form button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .update-form button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="update-form-container">
+        <form class="update-form" method="post" action="/update/<%= result._id %>">
+            <h2>Update Student</h2>
+            <input type="text" name="name" value="<%= result.name %>" placeholder="Enter User name" required />
+            <input type="number" name="age" value="<%= result.age %>" placeholder="Enter Age" required />
+            <input type="email" name="email" value="<%= result.email %>" placeholder="Enter Email" required />
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>
+yy
