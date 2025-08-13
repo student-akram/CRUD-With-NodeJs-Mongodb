@@ -31,15 +31,65 @@ app.get('/', async (req, resp) => {
 });
 
 // GET request for "Add Student" form
+// GET request for "Add Student" form with CSS
 app.get('/add', (req, resp) => {
-  // Simple HTML form for student input
   resp.send(`
-    <form method="post" action="add-student">
-      <input type="text" name="name" placeholder="Enter user name" /><br /><br />
-      <input type="text" name="age" placeholder="Enter age" /><br /><br />
-      <input type="text" name="email" placeholder="Enter email" /><br /><br />
-      <button type="submit">Submit</button>
-    </form>
+    <html>
+      <head>
+        <title>Add Student</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+          }
+          form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+          }
+          input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+          }
+          button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+          }
+          button:hover {
+            background-color: #218838;
+          }
+          h2 {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+        </style>
+      </head>
+      <body>
+        <form method="post" action="add-student">
+          <h2>Add Student</h2>
+          <input type="text" name="name" placeholder="Enter name" required />
+          <input type="text" name="age" placeholder="Enter age" required />
+          <input type="email" name="email" placeholder="Enter email" required />
+          <button type="submit">Submit</button>
+        </form>
+      </body>
+    </html>
   `);
 });
 
